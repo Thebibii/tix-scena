@@ -1,4 +1,4 @@
-import { ConcertList } from "@/components/public/concert-list";
+import { EventList } from "@/components/public/event-list";
 import { Hero } from "@/components/public/hero";
 import { Marquee } from "@/components/ui/marquee";
 
@@ -16,7 +16,7 @@ export default function Home() {
           </p>
         </Marquee>
       </div>
-      <ConcertList />
+      <EventList />
     </main>
   );
 }

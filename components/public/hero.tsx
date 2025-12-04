@@ -1,10 +1,10 @@
 import { ArrowRight, Disc3 } from "lucide-react";
 import Link from "next/link";
 import { ButtonBrutalism } from "../ui/brutalism/button";
-import { concerts } from "@/data/concerts";
+import { events } from "@/data/concerts";
 
 export const Hero = () => {
-  const featuredConcert = concerts.find((c) => c.isFeatured) || concerts[0];
+  const featuredConcert = events.find((c) => c.isFeatured) || events[0];
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -71,7 +71,7 @@ export const Hero = () => {
                 className="shadow-shadow bg-secondary text-primary"
                 asChild
               >
-                <Link href="#concerts">Jelajahi</Link>
+                <Link href="#events">Jelajahi</Link>
               </ButtonBrutalism>
             </div>
           </div>
@@ -86,12 +86,19 @@ export const Hero = () => {
                 </span>
               </div>
 
-              <div className="aspect-video bg-muted mb-4 relative overflow-hidden border-2 border-foreground">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-syne font-extrabold text-8xl text-foreground/10">
-                    ★
-                  </span>
-                </div>
+              <div className="aspect-video group bg-muted mb-4 relative overflow-hidden border-2 border-foreground">
+                <img
+                  src={featuredConcert.image || "/events/placeholder.jpg"}
+                  alt={featuredConcert.title}
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                {!featuredConcert.image && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="font-syne font-extrabold text-8xl text-foreground/10">
+                      ★
+                    </span>
+                  </div>
+                )}
               </div>
 
               <span className="inline-block px-3 py-1 bg-accent-rose text-secondary-foreground border border-foreground font-mono text-xs uppercase mb-3">
