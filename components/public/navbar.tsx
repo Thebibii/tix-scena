@@ -26,7 +26,13 @@ export const Navbar = () => {
               href="/"
               className="font-mono text-sm uppercase tracking-wider hover:line-through transition-all"
             >
-              Konser
+              Beranda
+            </Link>
+            <Link
+              href="/explore"
+              className="font-mono text-sm uppercase tracking-wider hover:line-through transition-all"
+            >
+              Explore
             </Link>
             <Link
               href="/about"
@@ -66,7 +72,14 @@ export const Navbar = () => {
               className="block font-mono text-sm uppercase tracking-wider py-2 hover:line-through"
               onClick={() => setIsMenuOpen(false)}
             >
-              Konser
+              Beranda
+            </Link>
+            <Link
+              href="/explore"
+              className="block font-mono text-sm uppercase tracking-wider py-2 hover:line-through"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Explore
             </Link>
             <Link
               href="/about"

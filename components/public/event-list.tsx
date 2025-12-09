@@ -3,6 +3,13 @@ import { useState } from "react";
 import { events, categories } from "@/data/concerts";
 import { ButtonBrutalism } from "../ui/brutalism/button";
 import { EventCard } from "./event-card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../ui/carousel";
 
 export const EventList = () => {
   const [activeCategory, setActiveCategory] = useState("all");
@@ -22,7 +29,7 @@ export const EventList = () => {
               Upcoming
             </span>
             <h2 className="font-syne font-extrabold text-4xl md:text-5xl tracking-tight">
-              SEMUA <span className="text-stroke">EVENT</span>
+              Event <span className="text-stroke">Terdekat</span>
             </h2>
           </div>
 
@@ -45,17 +52,30 @@ export const EventList = () => {
         </div>
 
         {/* Event Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredEvents.map((event, index) => (
-            <div
-              key={event.id}
-              className="animate-fade-in"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
-              <EventCard event={event} />
-            </div>
-          ))}
-        </div>
+        <Carousel
+          opts={{
+            loop: true,
+            align: "start",
+          }}
+        >
+          <CarouselContent className="">
+            {filteredEvents.map((event, index) => (
+              <CarouselItem
+                key={event.id}
+                className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
+              >
+                <div
+                  className="animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <EventCard event={event} />
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious className="left-0 sm:-left-4 " />
+          <CarouselNext className="right-0 sm:-right-4 " />
+        </Carousel>
 
         {filteredEvents.length === 0 && (
           <div className="text-center py-20 border-2 border-dashed border-foreground/30">

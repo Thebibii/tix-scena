@@ -200,7 +200,7 @@ export default function CreatorProfile() {
                   )}
 
                   {/* Stats */}
-                  <div className="flex flex-wrap gap-4">
+                  {/* <div className="flex flex-wrap gap-4">
                     <div className="p-4 bg-muted border-2 border-foreground/20">
                       <p className="font-syne font-extrabold text-2xl">
                         {totalEvents}
@@ -225,7 +225,7 @@ export default function CreatorProfile() {
                         Kategori
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

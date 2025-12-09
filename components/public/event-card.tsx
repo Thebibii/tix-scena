@@ -45,7 +45,7 @@ export const EventCard = ({ event }: EventCardProps) => {
   };
 
   return (
-    <Link href={`/event/${event.id}`} className="group block ">
+    <Link href={`/event/${event.id}`} className="group block px-4 sm:px-0">
       <CardBrutalism className="shadow-shadow p-0 gap-0">
         {/* Image */}
         <div className="aspect-4/3 bg-muted relative overflow-hidden">
@@ -95,7 +95,7 @@ export const EventCard = ({ event }: EventCardProps) => {
                 {event.creator.name.charAt(0)}
               </AvatarFallback>
             </Avatar>
-            <span className="font-mono text-xs text-muted-foreground truncate hover:underline">
+            <span className="font-mono text-sm truncate hover:underline">
               {event.creator.name}
             </span>
           </div>
