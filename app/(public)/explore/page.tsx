@@ -209,7 +209,7 @@ const Explore = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="font-syne text-4xl md:text-5xl font-black uppercase tracking-tighter mb-2">
+          <h1 className="font-gabirato text-4xl md:text-5xl font-black uppercase tracking-tighter mb-2">
             Explore Event
           </h1>
           <p className="font-mono text-sm text-muted-foreground">

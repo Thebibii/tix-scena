@@ -30,7 +30,7 @@ export default function Page() {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container mx-auto px-4 pt-32 text-center">
-          <h1 className="font-syne font-bold text-4xl mb-4">
+          <h1 className="font-gabirato font-bold text-4xl mb-4">
             Event tidak ditemukan
           </h1>
           <Link href="/">
@@ -104,7 +104,7 @@ export default function Page() {
 
       <div className="container mx-auto px-4 pb-16">
         <div className="max-w-4xl mx-auto">
-          <h1 className="font-syne font-extrabold text-3xl md:text-4xl mb-8">
+          <h1 className="font-gabirato font-extrabold text-3xl md:text-4xl mb-8">
             Pilih Tiket
           </h1>
 
@@ -115,12 +115,12 @@ export default function Page() {
               <div className="border-2 border-foreground p-4 bg-muted/50">
                 <div className="flex gap-4">
                   <div className="w-20 h-20 bg-muted border-2 border-foreground shrink-0 flex items-center justify-center">
-                    <span className="font-syne font-extrabold text-2xl text-foreground/20">
+                    <span className="font-gabirato font-extrabold text-2xl text-foreground/20">
                       {event.artist.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <h2 className="font-syne font-bold text-lg">
+                    <h2 className="font-gabirato font-bold text-lg">
                       {event.title}
                     </h2>
                     <p className="font-mono text-sm text-muted-foreground">
@@ -171,7 +171,7 @@ export default function Page() {
                           )}
                         </div>
                         <div>
-                          <span className="font-syne font-bold text-lg block">
+                          <span className="font-gabirato font-bold text-lg block">
                             {ticket.label}
                           </span>
                           <span className="font-mono text-sm text-muted-foreground">
@@ -179,7 +179,7 @@ export default function Page() {
                           </span>
                         </div>
                       </div>
-                      <span className="font-syne font-bold text-lg">
+                      <span className="font-gabirato font-bold text-lg">
                         {formatPrice(ticket.price)}
                       </span>
                     </div>
@@ -205,7 +205,7 @@ export default function Page() {
                     >
                       <Minus className="w-5 h-5" />
                     </button>
-                    <span className="font-syne font-bold text-2xl w-12 text-center">
+                    <span className="font-gabirato font-bold text-2xl w-12 text-center">
                       {quantity}
                     </span>
                     <button
@@ -222,7 +222,7 @@ export default function Page() {
             {/* Right - Order Summary */}
             <div className="md:col-span-2">
               <div className="border-2 border-foreground p-6 bg-card shadow-[4px_4px_0px_hsl(var(--foreground))] sticky top-24">
-                <h3 className="font-syne font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
+                <h3 className="font-gabirato font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
                   Ringkasan Pesanan
                 </h3>
 
@@ -240,7 +240,7 @@ export default function Page() {
                   <div className="border-t-2 border-dashed border-foreground/30 pt-3">
                     <div className="flex justify-between">
                       <span className="font-mono text-sm uppercase">Total</span>
-                      <span className="font-syne font-extrabold text-2xl">
+                      <span className="font-gabirato font-extrabold text-2xl">
                         {formatPrice(selectedPrice * quantity)}
                       </span>
                     </div>

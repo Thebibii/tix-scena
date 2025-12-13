@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { ButtonBrutalism } from "../ui/brutalism/button";
 
 export const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,7 @@ export const Navbar = () => {
           {/* Logo */}
           <Link
             href="/"
-            className="font-syne font-extrabold text-2xl tracking-tighter"
+            className="font-gabirato font-extrabold text-2xl tracking-tighter"
           >
             TIX
             <span className="text-stroke">SKENA</span>
@@ -44,13 +45,21 @@ export const Navbar = () => {
 
           {/* Cart & Mobile Menu */}
           <div className="flex items-center gap-4 justify-self-end">
-            <Avatar className="rounded-lg hidden md:block">
+            <ButtonBrutalism
+              variant="noShadow"
+              size="sm"
+              asChild
+              className="px-4 h-9 font-gabirato rounded-md hover:bg-primary/90"
+            >
+              <Link href="/auth/login">Masuk</Link>
+            </ButtonBrutalism>
+            {/* <Avatar className="rounded-lg hidden md:block">
               <AvatarImage
                 src="https://github.com/evilrabbit.png"
                 alt="@evilrabbit"
               />
               <AvatarFallback>ER</AvatarFallback>
-            </Avatar>
+            </Avatar> */}
             <button
               className="md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}

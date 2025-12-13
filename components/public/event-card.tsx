@@ -45,7 +45,7 @@ export const EventCard = ({ event }: EventCardProps) => {
   };
 
   return (
-    <Link href={`/event/${event.id}`} className="group block px-4 sm:px-0">
+    <Link href={`/event/${event.id}`} className="group block ">
       <CardBrutalism className="shadow-shadow p-0 gap-0">
         {/* Image */}
         <div className="aspect-4/3 bg-muted relative overflow-hidden">
@@ -72,7 +72,7 @@ export const EventCard = ({ event }: EventCardProps) => {
           {/* Placeholder big letter (jika image gagal load) */}
           {!event.image && (
             <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-syne font-extrabold text-6xl text-foreground/10 group-hover:text-foreground/20 transition-colors">
+              <span className="font-gabirato font-extrabold text-6xl text-foreground/10 group-hover:text-foreground/20 transition-colors">
                 {event.artist.charAt(0)}
               </span>
             </div>
@@ -100,7 +100,7 @@ export const EventCard = ({ event }: EventCardProps) => {
             </span>
           </div>
 
-          <h3 className="font-syne font-bold text-lg leading-tight mb-1 group-hover:line-through transition-all line-clamp-1">
+          <h3 className="font-gabirato font-bold text-lg leading-tight mb-1 group-hover:line-through transition-all line-clamp-1">
             {event.title}
           </h3>
           <p className="font-mono text-sm text-muted-foreground mb-3 line-clamp-1">
@@ -126,7 +126,7 @@ export const EventCard = ({ event }: EventCardProps) => {
             <span className="font-mono text-xs text-muted-foreground uppercase">
               Mulai dari
             </span>
-            <span className="font-syne font-bold text-lg">
+            <span className="font-gabirato font-bold text-lg">
               {formatPrice(event.price.regular)}
             </span>
           </div>

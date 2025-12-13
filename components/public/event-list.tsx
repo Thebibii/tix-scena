@@ -28,7 +28,7 @@ export const EventList = () => {
             <span className="inline-block px-3 py-1 bg-accent-mint text-accent-foreground border-2 border-foreground font-mono text-xs uppercase -rotate-1 mb-4">
               Upcoming
             </span>
-            <h2 className="font-syne font-extrabold text-4xl md:text-5xl tracking-tight">
+            <h2 className="font-gabirato font-extrabold text-4xl md:text-5xl tracking-tight">
               Event <span className="text-stroke">Terdekat</span>
             </h2>
           </div>
@@ -65,7 +65,7 @@ export const EventList = () => {
                 className="md:basis-1/2 lg:basis-1/3 xl:basis-1/4"
               >
                 <div
-                  className="animate-fade-in"
+                  className="animate-fade-in px-4 sm:px-0"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <EventCard event={event} />

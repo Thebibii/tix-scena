@@ -9,7 +9,7 @@ export const Footer = () => {
           <div>
             <Link
               href="/"
-              className="font-syne font-extrabold text-2xl tracking-tighter inline-block mb-4"
+              className="font-gabirato font-extrabold text-2xl tracking-tighter inline-block mb-4"
             >
               TIX<span className="opacity-50">SKENA</span>
             </Link>

@@ -28,15 +28,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/brutalism/dropdown-menu";
 import { ButtonBrutalism } from "@/components/ui/brutalism/button";
-
-// Helper function untuk mengecek apakah event sudah lewat
-const isPastEvent = (eventDate: string) => {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  const event = new Date(eventDate);
-  event.setHours(0, 0, 0, 0);
-  return event < today;
-};
+import { isPastEvent } from "@/lib/utils";
 
 // Sort options
 const SORT_OPTIONS = {
@@ -66,7 +58,7 @@ export default function CreatorProfile() {
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container mx-auto px-4 pt-32 text-center">
-          <h1 className="font-syne font-bold text-4xl mb-4">
+          <h1 className="font-gabirato font-bold text-4xl mb-4">
             Creator tidak ditemukan
           </h1>
           <Link href="/">
@@ -147,7 +139,7 @@ export default function CreatorProfile() {
               {/* Avatar */}
               <Avatar className="w-32 h-32 border-4 rounded-4xl border-foreground">
                 <AvatarImage src={creator.avatar} alt={creator.name} />
-                <AvatarFallback className="font-syne font-bold text-4xl bg-secondary">
+                <AvatarFallback className="font-gabirato font-bold text-4xl bg-secondary">
                   {creator.name.charAt(0)}
                 </AvatarFallback>
               </Avatar>
@@ -156,7 +148,7 @@ export default function CreatorProfile() {
               <div className="flex flex-col md:flex-row gap-8 items-start">
                 {/* Info */}
                 <div className="flex-1">
-                  <h1 className="font-syne font-extrabold text-3xl tracking-tight mb-4">
+                  <h1 className="font-gabirato font-extrabold text-3xl tracking-tight mb-4">
                     {creator.name}
                   </h1>
 
@@ -202,7 +194,7 @@ export default function CreatorProfile() {
                   {/* Stats */}
                   {/* <div className="flex flex-wrap gap-4">
                     <div className="p-4 bg-muted border-2 border-foreground/20">
-                      <p className="font-syne font-extrabold text-2xl">
+                      <p className="font-gabirato font-extrabold text-2xl">
                         {totalEvents}
                       </p>
                       <p className="font-mono text-xs text-muted-foreground uppercase">
@@ -210,7 +202,7 @@ export default function CreatorProfile() {
                       </p>
                     </div>
                     <div className="p-4 bg-muted border-2 border-foreground/20">
-                      <p className="font-syne font-extrabold text-2xl">
+                      <p className="font-gabirato font-extrabold text-2xl">
                         {cities.length}
                       </p>
                       <p className="font-mono text-xs text-muted-foreground uppercase">
@@ -218,7 +210,7 @@ export default function CreatorProfile() {
                       </p>
                     </div>
                     <div className="p-4 bg-muted border-2 border-foreground/20">
-                      <p className="font-syne font-extrabold text-2xl">
+                      <p className="font-gabirato font-extrabold text-2xl">
                         {categories.length}
                       </p>
                       <p className="font-mono text-xs text-muted-foreground uppercase">
@@ -234,7 +226,7 @@ export default function CreatorProfile() {
           {/* Events by Creator */}
           <div className="lg:col-span-2 lg:row-start-2 pt-4">
             <div className="flex items-center gap-4 mb-8">
-              <h2 className="font-syne font-bold text-2xl">
+              <h2 className="font-gabirato font-bold text-2xl">
                 Event oleh {creator.name}
               </h2>
               <div className="flex-1 h-0.5 bg-foreground/20" />

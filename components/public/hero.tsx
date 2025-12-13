@@ -39,7 +39,7 @@ export const Hero = () => {
               </span>
             </div>
 
-            <h1 className="font-syne font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter">
+            <h1 className="font-gabirato font-extrabold text-5xl md:text-7xl lg:text-8xl leading-none tracking-tighter">
               BELI
               <br />
               <span className="text-stroke">TIKET</span>
@@ -94,7 +94,7 @@ export const Hero = () => {
                 />
                 {!featuredConcert.image && (
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-syne font-extrabold text-8xl text-foreground/10">
+                    <span className="font-gabirato font-extrabold text-8xl text-foreground/10">
                       ★
                     </span>
                   </div>
@@ -105,7 +105,7 @@ export const Hero = () => {
                 {featuredConcert.genre}
               </span>
 
-              <h2 className="font-syne font-bold text-2xl mb-2">
+              <h2 className="font-gabirato font-bold text-2xl mb-2">
                 {featuredConcert.title}
               </h2>
               <p className="font-mono text-sm text-muted-foreground mb-4">

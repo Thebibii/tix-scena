@@ -85,7 +85,7 @@ export default async function Page({
       <div className="min-h-screen bg-background">
         <Navbar />
         <div className="container mx-auto px-4 pt-32 text-center">
-          <h1 className="font-syne font-bold text-4xl mb-4">
+          <h1 className="font-gabirato font-bold text-4xl mb-4">
             Konser tidak ditemukan
           </h1>
           <Link href="/">
@@ -123,7 +123,7 @@ export default async function Page({
               />
               {!event.image && (
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="font-syne font-extrabold text-[300px] text-foreground/5">
+                  <span className="font-gabirato font-extrabold text-[300px] text-foreground/5">
                     {event.artist.charAt(0)}
                   </span>
                 </div>
@@ -141,7 +141,7 @@ export default async function Page({
                     </span>
                   )}
                 </div>
-                <h1 className="font-syne font-extrabold text-4xl md:text-6xl tracking-tight mb-2">
+                <h1 className="font-gabirato font-extrabold text-4xl md:text-6xl tracking-tight mb-2">
                   {event.title}
                 </h1>
                 <p className="font-mono text-xl text-muted-foreground">
@@ -152,7 +152,7 @@ export default async function Page({
 
             {/* Event Info Card */}
             <div className="border-2 border-foreground p-6 bg-card shadow-shadow block lg:hidden">
-              <h3 className="font-syne font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
+              <h3 className="font-gabirato font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
                 Informasi Event
               </h3>
 
@@ -166,7 +166,9 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Nama Event
                     </p>
-                    <p className="font-syne font-bold text-sm">{event.title}</p>
+                    <p className="font-gabirato font-bold text-sm">
+                      {event.title}
+                    </p>
                   </div>
                 </div>
 
@@ -179,7 +181,9 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Lokasi
                     </p>
-                    <p className="font-syne font-bold text-sm">{event.venue}</p>
+                    <p className="font-gabirato font-bold text-sm">
+                      {event.venue}
+                    </p>
                     <p className="font-mono text-xs text-muted-foreground">
                       {event.city}
                     </p>
@@ -195,7 +199,7 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Tanggal & Waktu
                     </p>
-                    <p className="font-syne font-bold text-sm">
+                    <p className="font-gabirato font-bold text-sm">
                       {formatDate(event.date)}
                     </p>
                     <p className="font-mono text-xs text-muted-foreground">
@@ -213,7 +217,7 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Kategori
                     </p>
-                    <p className="font-syne font-bold text-sm">
+                    <p className="font-gabirato font-bold text-sm">
                       {categoryLabels[event.category] || event.category}
                     </p>
                   </div>
@@ -223,7 +227,7 @@ export default async function Page({
 
             {/* Organizer Card */}
             <div className="border-2 border-foreground p-6 bg-card shadow-shadow block lg:hidden">
-              <h3 className="font-syne font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
+              <h3 className="font-gabirato font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
                 Penyelenggara
               </h3>
 
@@ -241,7 +245,7 @@ export default async function Page({
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-syne font-bold hover:underline">
+                  <p className="font-gabirato font-bold hover:underline">
                     {event.creator.name}
                   </p>
                   <p className="font-mono text-xs text-muted-foreground">
@@ -326,7 +330,7 @@ export default async function Page({
           <div className="space-y-6 sticky top-24">
             {/* Event Info Card */}
             <div className="border-2 border-foreground p-6 bg-card shadow-shadow hidden lg:block">
-              <h3 className="font-syne font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
+              <h3 className="font-gabirato font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
                 Informasi Event
               </h3>
 
@@ -340,7 +344,9 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Nama Event
                     </p>
-                    <p className="font-syne font-bold text-sm">{event.title}</p>
+                    <p className="font-gabirato font-bold text-sm">
+                      {event.title}
+                    </p>
                   </div>
                 </div>
 
@@ -353,7 +359,9 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Lokasi
                     </p>
-                    <p className="font-syne font-bold text-sm">{event.venue}</p>
+                    <p className="font-gabirato font-bold text-sm">
+                      {event.venue}
+                    </p>
                     <p className="font-mono text-xs text-muted-foreground">
                       {event.city}
                     </p>
@@ -369,7 +377,7 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Tanggal & Waktu
                     </p>
-                    <p className="font-syne font-bold text-sm">
+                    <p className="font-gabirato font-bold text-sm">
                       {formatDate(event.date)}
                     </p>
                     <p className="font-mono text-xs text-muted-foreground">
@@ -387,7 +395,7 @@ export default async function Page({
                     <p className="font-mono text-xs text-muted-foreground uppercase">
                       Kategori
                     </p>
-                    <p className="font-syne font-bold text-sm">
+                    <p className="font-gabirato font-bold text-sm">
                       {categoryLabels[event.category] || event.category}
                     </p>
                   </div>
@@ -397,7 +405,7 @@ export default async function Page({
 
             {/* Organizer Card */}
             <div className="border-2 border-foreground p-6 bg-card shadow-shadow hidden lg:block">
-              <h3 className="font-syne font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
+              <h3 className="font-gabirato font-bold text-lg mb-4 pb-3 border-b-2 border-dashed border-foreground/30">
                 Penyelenggara
               </h3>
 
@@ -415,7 +423,7 @@ export default async function Page({
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-syne font-bold hover:underline">
+                  <p className="font-gabirato font-bold hover:underline">
                     {event.creator.name}
                   </p>
                   <p className="font-mono text-xs text-muted-foreground">
@@ -467,7 +475,7 @@ export default async function Page({
                 <p className="font-mono text-xs text-muted-foreground uppercase mb-1">
                   Harga mulai dari
                 </p>
-                <p className="font-syne font-extrabold text-3xl">
+                <p className="font-gabirato font-extrabold text-3xl">
                   {formatPrice(event.price.regular)}
                 </p>
               </div>
@@ -488,7 +496,7 @@ export default async function Page({
       <div className="container mx-auto px-4 pb-16">
         {recommendedEvents.length > 0 && (
           <div>
-            <h2 className="font-syne font-bold text-2xl mb-6">
+            <h2 className="font-gabirato font-bold text-2xl mb-6">
               Event Rekomendasi
             </h2>
             <Carousel
@@ -497,7 +505,7 @@ export default async function Page({
                 align: "start",
               }}
             >
-              <CarouselContent className="">
+              <CarouselContent className="px-4 sm:px-0">
                 {recommendedEvents.map((recEvent) => (
                   <CarouselItem
                     key={recEvent.id}

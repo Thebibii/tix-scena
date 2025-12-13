@@ -7,7 +7,7 @@ export default function Layout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className=" bg-zinc-50 min-h-screen dark:bg-black">
+    <div className=" bg-zinc-50 min-h-screen">
       <Navbar />
       {children}
       <Footer />
